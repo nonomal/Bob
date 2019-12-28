@@ -24,6 +24,7 @@
 
 #define _MMObserve(OBSERVER, TARGET, KEYPATH) \
 ({ \
+    NSAssert(OBSERVER, @"warning: observer == nil 会使监听关系难以解除");\
     __weak id target_ = (TARGET); \
     [target_ rac_valuesForKeyPath:@keypath(TARGET, KEYPATH) observer:OBSERVER]; \
 })
