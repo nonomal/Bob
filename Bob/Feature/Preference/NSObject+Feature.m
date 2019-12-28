@@ -6,7 +6,7 @@
 //  Copyright © 2019 ripperhe. All rights reserved.
 //
 
-#import "NSObject+DarkMode.h"
+#import "NSObject+Feature.h"
 #import "DarkModeManager.h"
 #import <AppKit/AppKit.h>
 

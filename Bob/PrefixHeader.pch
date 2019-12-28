@@ -30,8 +30,8 @@
 #import "MMOrderedDictionary.h"
 #import "Singleton.h"
 #import <ReactiveObjC.h>
-#import "NSObject+DarkMode.h"
-#import "NSView+HiddenDebug.h"
+#import "NSObject+Feature.h"
+#import "NSView+Debug.h"
 #import "MMLog.h"
 
 #import "BobMacro.h"

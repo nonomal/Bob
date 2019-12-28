@@ -7,6 +7,7 @@
 //
 
 #import "DarkModeManager.h"
+#import "PreferenceManager.h"
 
 @interface DarkModeManager()
 
@@ -18,23 +19,20 @@
 
 singleton_m(DarkModeManager)
 
-+ (void)load {
-    [[self manager] fetch];
-    [[self manager] monitor];
-}
-
 + (instancetype)manager {
     return [self shared];
 }
 
-- (void)excuteLight:(void(^)(void))light dark:(void(^)(void))dark {
-    [RACObserve([DarkModeManager manager], systemDarkMode) subscribeNext:^(id  _Nullable x) {
-        if ([x boolValue]) {
-            !dark ?: dark();
-        } else {
-            !light ?: light();
-        }
-    }];
+- (instancetype)init {
+    if (self = [super init]) {
+        [self fetch];
+        [self monitor];
+        [self test];
+    }
+    return self;
+}
+
+- (void)test {
 }
 
 - (void)fetch {

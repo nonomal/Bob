@@ -6,7 +6,7 @@
 //  Copyright © 2019 ripperhe. All rights reserved.
 //
 
-#import "NSView+HiddenDebug.h"
+#import "NSView+Debug.h"
 #import <AppKit/AppKit.h>
 
 @implementation NSView (HiddenDebug)

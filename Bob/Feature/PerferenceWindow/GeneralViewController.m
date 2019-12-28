@@ -9,6 +9,7 @@
 #import "GeneralViewController.h"
 #import "Shortcut.h"
 #import "Configuration.h"
+#import "NSObject+Debug.h"
 
 @interface GeneralViewController ()
 
@@ -24,13 +25,13 @@
 @implementation GeneralViewController
 
 - (instancetype)init {
+    [self debug_hookAllMehtods];
     return [super initWithNibName:[self className] bundle:nil];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-    
     self.selectionShortcutView.style = MASShortcutViewStyleTexturedRect;
     [self.selectionShortcutView setAssociatedUserDefaultsKey:SelectionShortcutKey];
     

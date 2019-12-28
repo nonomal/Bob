@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C90007F323B3BA710002B6A0 /* NSObject+DarkMode.m in Sources */ = {isa = PBXBuildFile; fileRef = C90007F223B3BA710002B6A0 /* NSObject+DarkMode.m */; };
-		C90007F623B3C5BB0002B6A0 /* NSView+HiddenDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = C90007F523B3C5BB0002B6A0 /* NSView+HiddenDebug.m */; };
+		C90007F323B3BA710002B6A0 /* NSObject+Feature.m in Sources */ = {isa = PBXBuildFile; fileRef = C90007F223B3BA710002B6A0 /* NSObject+Feature.m */; };
+		C90007F623B3C5BB0002B6A0 /* NSView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = C90007F523B3C5BB0002B6A0 /* NSView+Debug.m */; };
 		C90BE30D239F38EB00ADE88B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C90BE30C239F38EB00ADE88B /* AppDelegate.m */; };
 		C90BE310239F38EB00ADE88B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90BE30F239F38EB00ADE88B /* ViewController.m */; };
 		C90BE312239F38EC00ADE88B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C90BE311239F38EC00ADE88B /* Assets.xcassets */; };
@@ -80,6 +80,8 @@
 		C9C3BDCA238E76C800D5F1C1 /* SnipWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C3BDC9238E76C800D5F1C1 /* SnipWindow.m */; };
 		C9C3BDCD238E78BA00D5F1C1 /* SnipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C3BDCC238E78BA00D5F1C1 /* SnipViewController.m */; };
 		C9C3BDD3238EA0EF00D5F1C1 /* Snip.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C3BDD2238EA0EF00D5F1C1 /* Snip.m */; };
+		C9C4CF2F23B79C6D009C602E /* NSObject+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C4CF2E23B79C6D009C602E /* NSObject+Debug.m */; };
+		C9C4CF3223B7A013009C602E /* PreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C4CF3123B7A013009C602E /* PreferenceManager.m */; };
 		C9D679CC23A3403F0073957C /* NSDictionary+MM.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D679CB23A3403F0073957C /* NSDictionary+MM.m */; };
 		C9F7E87C23A2165F0025ADF6 /* YoudaoTranslate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F7E87B23A2165F0025ADF6 /* YoudaoTranslate.m */; };
 		D2B213678C42C42C2AD2339C /* Pods_Bob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F045DD4639F4F9836B1E8D6 /* Pods_Bob.framework */; };
@@ -101,10 +103,10 @@
 /* Begin PBXFileReference section */
 		3A08EDDF832035FD57B6A226 /* Pods-Bob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bob.release.xcconfig"; path = "Target Support Files/Pods-Bob/Pods-Bob.release.xcconfig"; sourceTree = "<group>"; };
 		3F045DD4639F4F9836B1E8D6 /* Pods_Bob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C90007F123B3BA710002B6A0 /* NSObject+DarkMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DarkMode.h"; sourceTree = "<group>"; };
-		C90007F223B3BA710002B6A0 /* NSObject+DarkMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DarkMode.m"; sourceTree = "<group>"; };
-		C90007F423B3C5BB0002B6A0 /* NSView+HiddenDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+HiddenDebug.h"; sourceTree = "<group>"; };
-		C90007F523B3C5BB0002B6A0 /* NSView+HiddenDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+HiddenDebug.m"; sourceTree = "<group>"; };
+		C90007F123B3BA710002B6A0 /* NSObject+Feature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Feature.h"; sourceTree = "<group>"; };
+		C90007F223B3BA710002B6A0 /* NSObject+Feature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Feature.m"; sourceTree = "<group>"; };
+		C90007F423B3C5BB0002B6A0 /* NSView+Debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+Debug.h"; sourceTree = "<group>"; };
+		C90007F523B3C5BB0002B6A0 /* NSView+Debug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+Debug.m"; sourceTree = "<group>"; };
 		C90BE309239F38EB00ADE88B /* BobHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BobHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90BE30B239F38EB00ADE88B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C90BE30C239F38EB00ADE88B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -246,6 +248,10 @@
 		C9C3BDCC238E78BA00D5F1C1 /* SnipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnipViewController.m; sourceTree = "<group>"; };
 		C9C3BDD1238EA0EF00D5F1C1 /* Snip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Snip.h; sourceTree = "<group>"; };
 		C9C3BDD2238EA0EF00D5F1C1 /* Snip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Snip.m; sourceTree = "<group>"; };
+		C9C4CF2D23B79C6D009C602E /* NSObject+Debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Debug.h"; sourceTree = "<group>"; };
+		C9C4CF2E23B79C6D009C602E /* NSObject+Debug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Debug.m"; sourceTree = "<group>"; };
+		C9C4CF3023B7A013009C602E /* PreferenceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceManager.h; sourceTree = "<group>"; };
+		C9C4CF3123B7A013009C602E /* PreferenceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceManager.m; sourceTree = "<group>"; };
 		C9D679CA23A3403F0073957C /* NSDictionary+MM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MM.h"; sourceTree = "<group>"; };
 		C9D679CB23A3403F0073957C /* NSDictionary+MM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MM.m"; sourceTree = "<group>"; };
 		C9F7E87A23A2165F0025ADF6 /* YoudaoTranslate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YoudaoTranslate.h; sourceTree = "<group>"; };
@@ -315,18 +321,18 @@
 			path = Google;
 			sourceTree = "<group>";
 		};
-		C988B28523B1F11F007C8108 /* DarkMode */ = {
+		C988B28523B1F11F007C8108 /* Preference */ = {
 			isa = PBXGroup;
 			children = (
 				C988B28923B1F135007C8108 /* Singleton.h */,
 				C988B28623B1F12D007C8108 /* DarkModeManager.h */,
 				C988B28723B1F12D007C8108 /* DarkModeManager.m */,
-				C90007F123B3BA710002B6A0 /* NSObject+DarkMode.h */,
-				C90007F223B3BA710002B6A0 /* NSObject+DarkMode.m */,
-				C90007F423B3C5BB0002B6A0 /* NSView+HiddenDebug.h */,
-				C90007F523B3C5BB0002B6A0 /* NSView+HiddenDebug.m */,
+				C90007F123B3BA710002B6A0 /* NSObject+Feature.h */,
+				C90007F223B3BA710002B6A0 /* NSObject+Feature.m */,
+				C9C4CF3023B7A013009C602E /* PreferenceManager.h */,
+				C9C4CF3123B7A013009C602E /* PreferenceManager.m */,
 			);
-			path = DarkMode;
+			path = Preference;
 			sourceTree = "<group>";
 		};
 		C98C179A239E1B7400BD02DB /* PerferenceWindow */ = {
@@ -393,6 +399,17 @@
 			path = Crash;
 			sourceTree = "<group>";
 		};
+		C98ECE5723B79600001A9B34 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				C90007F423B3C5BB0002B6A0 /* NSView+Debug.h */,
+				C90007F523B3C5BB0002B6A0 /* NSView+Debug.m */,
+				C9C4CF2D23B79C6D009C602E /* NSObject+Debug.h */,
+				C9C4CF2E23B79C6D009C602E /* NSObject+Debug.m */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
 		C99EEB0F2385796700FEE666 = {
 			isa = PBXGroup;
 			children = (
@@ -435,8 +452,9 @@
 		C99EEB872385799D00FEE666 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				C98ECE5723B79600001A9B34 /* Debug */,
 				C98CFA1E239F8C4000FB7EC4 /* MMKit */,
-				C988B28523B1F11F007C8108 /* DarkMode */,
+				C988B28523B1F11F007C8108 /* Preference */,
 				C99EEBAD2385799D00FEE666 /* Selection */,
 				C9C3BDC4238E766B00D5F1C1 /* Snip */,
 				C9F7E87623A210B80025ADF6 /* Translate */,
@@ -792,7 +810,7 @@
 				C98CFA33239FA6F400FB7EC4 /* MMCrashUncaughtExceptionHandler.m in Sources */,
 				C99EEBD42385799D00FEE666 /* StatusItem.m in Sources */,
 				C98CFA34239FA6F400FB7EC4 /* MMCrashSignalExceptionHandler.m in Sources */,
-				C90007F623B3C5BB0002B6A0 /* NSView+HiddenDebug.m in Sources */,
+				C90007F623B3C5BB0002B6A0 /* NSView+Debug.m in Sources */,
 				C9AEF96B23A0D57A003BE95C /* TextView.m in Sources */,
 				C91DF6B023A35E07009CB158 /* MMOrderedDictionary.m in Sources */,
 				C98C17A5239E40AC00BD02DB /* GeneralViewController.m in Sources */,
@@ -812,6 +830,7 @@
 				C90C77852391188400A65E42 /* SnipFocusView.m in Sources */,
 				C99EEB282385796900FEE666 /* main.m in Sources */,
 				C99EEBC42385799D00FEE666 /* Configuration.m in Sources */,
+				C9C4CF2F23B79C6D009C602E /* NSObject+Debug.m in Sources */,
 				C99EEBC62385799D00FEE666 /* TranslateError.m in Sources */,
 				C98C17A1239E3F4A00BD02DB /* PreferencesWindowController.m in Sources */,
 				C9C3BDC7238E76B000D5F1C1 /* SnipWindowController.m in Sources */,
@@ -828,11 +847,12 @@
 				C99EEBC82385799D00FEE666 /* BaiduTranslateResponse.m in Sources */,
 				C99EEBDA2385799D00FEE666 /* NSButton+MM.m in Sources */,
 				C98CFA29239F8CDB00FB7EC4 /* MMFileLogFormatter.m in Sources */,
+				C9C4CF3223B7A013009C602E /* PreferenceManager.m in Sources */,
 				C98C17B0239E516A00BD02DB /* Shortcut.m in Sources */,
 				C98C17AA239E410300BD02DB /* AboutViewController.m in Sources */,
 				C98CFA35239FA6F400FB7EC4 /* MMCrashFileTool.m in Sources */,
 				C99EEBC52385799D00FEE666 /* BaiduTranslate.m in Sources */,
-				C90007F323B3BA710002B6A0 /* NSObject+DarkMode.m in Sources */,
+				C90007F323B3BA710002B6A0 /* NSObject+Feature.m in Sources */,
 				C99EEB1D2385796700FEE666 /* AppDelegate.m in Sources */,
 				C99EEBD72385799D00FEE666 /* MMMake.m in Sources */,
 				C9D679CC23A3403F0073957C /* NSDictionary+MM.m in Sources */,
@@ -1046,6 +1066,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 0.2.0.0;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Bob/PrefixHeader.pch";
 				INFOPLIST_FILE = Bob/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1056,6 +1077,7 @@
 				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ripperhe.Bob-debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bob/Bob-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
