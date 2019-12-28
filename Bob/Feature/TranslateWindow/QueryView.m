@@ -9,6 +9,7 @@
 #import "QueryView.h"
 #import "ImageButton.h"
 #import "TextView.h"
+#import "PreferenceManager.h"
 
 #define kMinHeight 120.0
 #define kTextViewBottomInset 36.0
@@ -55,6 +56,21 @@ DefineMethodMMMake_m(QueryView)
                 [x setBackgroundColor:DeepDarkColor];
                 [x setTextColor:[NSColor whiteColor]];
             }];
+            RAC(textView, font) = [RACObserve([PreferenceManager manager], font) map:^id _Nullable(id  _Nullable value) {
+                NSInteger fontNumber = [value integerValue];
+                // TODO: waiting for UI @shenjie
+                switch (fontNumber) {
+                    case 0:
+                        return [NSFont systemFontOfSize:12];
+                    case 1:
+                        return [NSFont systemFontOfSize:15];
+                    case 2:
+                        return [NSFont systemFontOfSize:18];
+                        default:
+                    return [NSFont systemFontOfSize:15];
+                }
+            }];
+            
             [textView setAutoresizingMask:NSViewHeightSizable | NSViewWidthSizable];
             textView.delegate = self;
         }];

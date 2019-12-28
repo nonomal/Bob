@@ -324,13 +324,13 @@
 		C988B28523B1F11F007C8108 /* Preference */ = {
 			isa = PBXGroup;
 			children = (
-				C988B28923B1F135007C8108 /* Singleton.h */,
 				C988B28623B1F12D007C8108 /* DarkModeManager.h */,
 				C988B28723B1F12D007C8108 /* DarkModeManager.m */,
 				C90007F123B3BA710002B6A0 /* NSObject+Feature.h */,
 				C90007F223B3BA710002B6A0 /* NSObject+Feature.m */,
 				C9C4CF3023B7A013009C602E /* PreferenceManager.h */,
 				C9C4CF3123B7A013009C602E /* PreferenceManager.m */,
+				C988B28923B1F135007C8108 /* Singleton.h */,
 			);
 			path = Preference;
 			sourceTree = "<group>";

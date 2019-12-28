@@ -7,6 +7,7 @@
 //
 
 #import "ResultView.h"
+#import "PreferenceManager.h"
 
 #define kMargin 12.0
 
@@ -34,12 +35,27 @@
         self.wordResultView = [WordResultView new];
         self.stateTextField = [[NSTextField wrappingLabelWithString:@""] mm_put:^(NSTextField * _Nonnull textField) {
             [self addSubview:textField];
-            textField.font = [NSFont systemFontOfSize:14];
             [textField excuteLight:^(id  _Nonnull x) {
                 [x setTextColor:[NSColor mm_colorWithHexString:@"#333333"]];
             } drak:^(id  _Nonnull x) {
                 [x setTextColor:NSColor.whiteColor];
             }];
+            
+            RAC(textField, font) = [RACObserve([PreferenceManager manager], font) map:^id _Nullable(id  _Nullable value) {
+                NSInteger fontNumber = [value integerValue];
+                // TODO: waiting for UI @shenjie
+                switch (fontNumber) {
+                    case 0:
+                        return [NSFont systemFontOfSize:14];
+                    case 1:
+                        return [NSFont systemFontOfSize:15];
+                    case 2:
+                        return [NSFont systemFontOfSize:18];
+                        default:
+                    return [NSFont systemFontOfSize:14];
+                }
+            }];
+            
             [textField mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.offset(kMargin);
                 make.left.offset(kMargin);
@@ -118,7 +134,20 @@
     self.stateTextField.stringValue = string;
     if (actionTitle.length) {
         self.actionButton.hidden = NO;
-        self.actionButton.attributedTitle = [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:14] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
+        RAC(self.actionButton, attributedTitle) = [RACObserve([PreferenceManager manager], font) map:^id _Nullable(id  _Nullable value) {
+            NSInteger fontNumber = [value integerValue];
+            // TODO: waiting for UI @shenjie
+            switch (fontNumber) {
+                case 0:
+                    return [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:14] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
+                case 1:
+                    return [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:15] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
+                case 2:
+                    return [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:18] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
+                    default:
+                return [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:18] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
+            }
+        }];
         self.actionBlock = action;
         [self.actionButtonBottomConstraint install];
     }else {

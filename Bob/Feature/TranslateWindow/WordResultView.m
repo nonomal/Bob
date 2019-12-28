@@ -8,6 +8,7 @@
 
 #import "WordResultView.h"
 #import "ImageButton.h"
+#import "PreferenceManager.h"
 
 #define kMargin 12.0
 /// wrappingLabel的约束需要偏移2,不知道是什么神设计
@@ -49,7 +50,21 @@
             } drak:^(id  _Nonnull x) {
                 [x setTextColor:NSColor.whiteColor];
             }];
-            textField.font = [NSFont systemFontOfSize:13];
+            
+            RAC(textField, font) = [RACObserve([PreferenceManager manager], font) map:^id _Nullable(id  _Nullable value) {
+                NSInteger fontNumber = [value integerValue];
+                // TODO: waiting for UI @shenjie
+                switch (fontNumber) {
+                    case 0:
+                        return [NSFont systemFontOfSize:13];
+                    case 1:
+                        return [NSFont systemFontOfSize:15];
+                    case 2:
+                        return [NSFont systemFontOfSize:18];
+                        default:
+                    return [NSFont systemFontOfSize:15];
+                }
+            }];
             textField.editable = NO;
             textField.bordered = NO;
             textField.backgroundColor = NSColor.clearColor;
@@ -74,7 +89,21 @@
                 } drak:^(id  _Nonnull x) {
                     [x setTextColor:NSColor.whiteColor];
                 }];
-                textField.font = [NSFont systemFontOfSize:13];
+    
+                RAC(textField, font) = [RACObserve([PreferenceManager manager], font) map:^id _Nullable(id  _Nullable value) {
+                    NSInteger fontNumber = [value integerValue];
+                    // TODO: waiting for UI @shenjie
+                    switch (fontNumber) {
+                        case 0:
+                            return [NSFont systemFontOfSize:13];
+                        case 1:
+                            return [NSFont systemFontOfSize:15];
+                        case 2:
+                            return [NSFont systemFontOfSize:18];
+                            default:
+                        return [NSFont systemFontOfSize:15];
+                    }
+                }];
                 textField.editable = NO;
                 textField.bordered = NO;
                 textField.backgroundColor = NSColor.clearColor;
@@ -118,7 +147,21 @@
                 [self addSubview:textField];
                 textField.stringValue = obj.part;
                 textField.textColor = [NSColor mm_colorWithHexString:@"#999999"];
-                textField.font = [NSFont systemFontOfSize:13];
+                
+                RAC(textField, font) = [RACObserve([PreferenceManager manager], font) map:^id _Nullable(id  _Nullable value) {
+                    NSInteger fontNumber = [value integerValue];
+                    // TODO: waiting for UI @shenjie
+                    switch (fontNumber) {
+                        case 0:
+                            return [NSFont systemFontOfSize:13];
+                        case 1:
+                            return [NSFont systemFontOfSize:15];
+                        case 2:
+                            return [NSFont systemFontOfSize:18];
+                            default:
+                        return [NSFont systemFontOfSize:15];
+                    }
+                }];
                 textField.editable = NO;
                 textField.bordered = NO;
                 textField.backgroundColor = NSColor.clearColor;
@@ -145,7 +188,21 @@
             } drak:^(id  _Nonnull x) {
                 [x setTextColor:NSColor.whiteColor];
             }];
-            textField.font = [NSFont systemFontOfSize:13];
+
+            RAC(textField, font) = [RACObserve([PreferenceManager manager], font) map:^id _Nullable(id  _Nullable value) {
+                NSInteger fontNumber = [value integerValue];
+                // TODO: waiting for UI @shenjie
+                switch (fontNumber) {
+                    case 0:
+                        return [NSFont systemFontOfSize:13];
+                    case 1:
+                        return [NSFont systemFontOfSize:15];
+                    case 2:
+                        return [NSFont systemFontOfSize:18];
+                        default:
+                    return [NSFont systemFontOfSize:15];
+                }
+            }];
             textField.backgroundColor = NSColor.clearColor;
             textField.alignment = NSTextAlignmentLeft;
             [textField mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -180,7 +237,21 @@
             } drak:^(id  _Nonnull x) {
                 [x setTextColor:NSColor.whiteColor];
             }];
-            textField.font = [NSFont systemFontOfSize:13];
+            
+            RAC(textField, font) = [RACObserve([PreferenceManager manager], font) map:^id _Nullable(id  _Nullable value) {
+                NSInteger fontNumber = [value integerValue];
+                // TODO: waiting for UI @shenjie
+                switch (fontNumber) {
+                    case 0:
+                        return [NSFont systemFontOfSize:13];
+                    case 1:
+                        return [NSFont systemFontOfSize:15];
+                    case 2:
+                        return [NSFont systemFontOfSize:18];
+                        default:
+                    return [NSFont systemFontOfSize:15];
+                }
+            }];
             textField.editable = NO;
             textField.bordered = NO;
             textField.backgroundColor = NSColor.clearColor;
@@ -240,7 +311,21 @@
                 [self addSubview:textField];
                 textField.stringValue = obj.part;
                 textField.textColor = [NSColor mm_colorWithHexString:@"#999999"];
-                textField.font = [NSFont systemFontOfSize:13];
+                
+                RAC(textField, font) = [RACObserve([PreferenceManager manager], font) map:^id _Nullable(id  _Nullable value) {
+                    NSInteger fontNumber = [value integerValue];
+                    // TODO: waiting for UI @shenjie
+                    switch (fontNumber) {
+                        case 0:
+                            return [NSFont systemFontOfSize:13];
+                        case 1:
+                            return [NSFont systemFontOfSize:15];
+                        case 2:
+                            return [NSFont systemFontOfSize:18];
+                            default:
+                        return [NSFont systemFontOfSize:15];
+                    }
+                }];
                 textField.editable = NO;
                 textField.bordered = NO;
                 textField.backgroundColor = NSColor.clearColor;
@@ -264,6 +349,7 @@
             button.bezelStyle = NSBezelStyleRegularSquare;
             [button setButtonType:NSButtonTypeMomentaryChange];
             button.attributedTitle = [NSAttributedString mm_attributedStringWithString:obj.word font:[NSFont systemFontOfSize:13] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
+            // TODO:
             [button sizeToFit];
             [button mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.offset(kMargin);
@@ -295,7 +381,21 @@
             } drak:^(id  _Nonnull x) {
                 [x setTextColor:NSColor.whiteColor];
             }];
-            textField.font = [NSFont systemFontOfSize:13];
+            RAC(textField, font) = [RACObserve([PreferenceManager manager], font) map:^id _Nullable(id  _Nullable value) {
+                NSInteger fontNumber = [value integerValue];
+                // TODO: waiting for UI @shenjie
+                switch (fontNumber) {
+                    case 0:
+                        return [NSFont systemFontOfSize:13];
+                    case 1:
+                        return [NSFont systemFontOfSize:15];
+                    case 2:
+                        return [NSFont systemFontOfSize:18];
+                        default:
+                    return [NSFont systemFontOfSize:15];
+                }
+            }];
+            
             textField.backgroundColor = NSColor.clearColor;
             textField.alignment = NSTextAlignmentLeft;
             [textField mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -317,7 +417,21 @@
             } drak:^(id  _Nonnull x) {
                 [x setTextColor:NSColor.whiteColor];
             }];
-            textField.font = [NSFont systemFontOfSize:13];
+            
+            RAC(textField, font) = [RACObserve([PreferenceManager manager], font) map:^id _Nullable(id  _Nullable value) {
+                NSInteger fontNumber = [value integerValue];
+                // TODO: waiting for UI @shenjie
+                switch (fontNumber) {
+                    case 0:
+                        return [NSFont systemFontOfSize:13];
+                    case 1:
+                        return [NSFont systemFontOfSize:15];
+                    case 2:
+                        return [NSFont systemFontOfSize:18];
+                        default:
+                    return [NSFont systemFontOfSize:15];
+                }
+            }];
             textField.backgroundColor = NSColor.clearColor;
             textField.alignment = NSTextAlignmentLeft;
             [textField mas_makeConstraints:^(MASConstraintMaker *make) {
