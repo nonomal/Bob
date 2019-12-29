@@ -12,10 +12,6 @@
 
 singleton_m(PreferenceManager)
 
-+ (void)load {
-    [self manager];
-}
-
 + (instancetype)manager {
     return [self shared];
 }

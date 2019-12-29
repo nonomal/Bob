@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14865.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="autoCheckUpdateButton" destination="3Ux-D6-rfd" id="sDd-Zj-XRK"/>
                 <outlet property="autoCopyTranslateResultButton" destination="vKL-Rb-7ex" id="nIS-CE-i2e"/>
+                <outlet property="fontSlider" destination="gku-Uy-WIA" id="dOc-aC-Tx4"/>
                 <outlet property="inputShortcutView" destination="29j-qh-lea" id="aox-Rc-wk2"/>
                 <outlet property="launchAtStartup" destination="rdS-e7-tO0" id="JUL-Dw-2Ik"/>
                 <outlet property="launchAtStartupButton" destination="rdS-e7-tO0" id="R8S-B1-tU4"/>
@@ -51,7 +52,7 @@
                     <rect key="frame" x="153" y="56" width="89" height="18"/>
                     <buttonCell key="cell" type="check" title="开机自启动" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="0e5-PT-Ixx">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="label" size="13"/>
                     </buttonCell>
                     <connections>
                         <action selector="launchAtStartupButtonClicked:" target="-2" id="FKO-py-vG2"/>
@@ -80,7 +81,7 @@
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="E7D-SM-ttH">
                     <rect key="frame" x="81" y="166" width="68" height="16"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="输入翻译：" id="uWf-a6-Vf9">
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="label" size="13"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -89,7 +90,7 @@
                     <rect key="frame" x="153" y="24" width="102" height="18"/>
                     <buttonCell key="cell" type="check" title="自动检查更新" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="6JV-Vl-CaE">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="label" size="13"/>
                     </buttonCell>
                     <connections>
                         <action selector="autoCheckUpdateButtonClicked:" target="-2" id="TZA-Jj-jOt"/>
@@ -105,12 +106,20 @@
                     <rect key="frame" x="153" y="107" width="129" height="18"/>
                     <buttonCell key="cell" type="check" title="自动复制翻译结果" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="3Rf-pg-98U">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="label" size="13"/>
                     </buttonCell>
                     <connections>
                         <action selector="autoCopyTranslateResultButtonClicked:" target="-2" id="Ple-eL-Uhj"/>
                     </connections>
                 </button>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gku-Uy-WIA">
+                    <rect key="frame" x="132" y="141" width="192" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="15.019710099044193" tickMarkPosition="above" allowsTickMarkValuesOnly="YES" sliderType="linear" id="ejg-gI-wms"/>
+                    <connections>
+                        <action selector="fontDidChanged:" target="-2" id="iQD-is-EuZ"/>
+                    </connections>
+                </slider>
             </subviews>
             <constraints>
                 <constraint firstItem="3Ux-D6-rfd" firstAttribute="leading" secondItem="vKL-Rb-7ex" secondAttribute="leading" id="3Uf-4F-gAp"/>
@@ -138,7 +147,7 @@
                 <constraint firstItem="4dL-3k-Qcg" firstAttribute="leading" secondItem="sCf-ch-6bJ" secondAttribute="trailing" constant="8" id="sGa-O6-Kkp"/>
                 <constraint firstAttribute="trailing" secondItem="01Q-Sk-Jhp" secondAttribute="trailing" constant="38" id="suk-kU-xqJ"/>
             </constraints>
-            <point key="canvasLocation" x="126" y="159"/>
+            <point key="canvasLocation" x="17" y="58"/>
         </customView>
     </objects>
 </document>

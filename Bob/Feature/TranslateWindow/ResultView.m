@@ -142,10 +142,13 @@
             switch (fontNumber) {
                 case 0:
                     self.actionButton.attributedTitle = [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:14] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
+                    break;
                 case 1:
                     self.actionButton.attributedTitle =  [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:15] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
+                    break;
                 case 2:
                     self.actionButton.attributedTitle =  [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:18] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
+                    break;
                     default:
                 self.actionButton.attributedTitle =  [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:18] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
             }

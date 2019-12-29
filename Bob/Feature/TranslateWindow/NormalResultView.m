@@ -10,6 +10,7 @@
 #import "ImageButton.h"
 #import "TranslateWindowController.h"
 #import "TextView.h"
+#import "PreferenceManager.h"
 
 #define kMinHeight 120.0
 #define kTextViewBottomInset 36.0
@@ -56,6 +57,20 @@ DefineMethodMMMake_m(NormalResultView)
             } drak:^(id  _Nonnull x) {
                 [x setBackgroundColor:DarkGrayColor];
                 [x setTextColor:[NSColor whiteColor]];
+            }];
+            RAC(textView, font) = [MMObserve(textView, [PreferenceManager manager], font) map:^id _Nullable(id  _Nullable value) {
+                NSInteger fontNumber = [value integerValue];
+                // TODO: waiting for UI @shenjie
+                switch (fontNumber) {
+                    case 0:
+                        return [NSFont systemFontOfSize:13];
+                    case 1:
+                        return [NSFont systemFontOfSize:15];
+                    case 2:
+                        return [NSFont systemFontOfSize:18];
+                        default:
+                    return [NSFont systemFontOfSize:13];
+                }
             }];
             [textView setAutoresizingMask:NSViewHeightSizable | NSViewWidthSizable];
         }];

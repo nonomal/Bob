@@ -10,6 +10,7 @@
 #import "Shortcut.h"
 #import "Configuration.h"
 #import "NSObject+Debug.h"
+#import "PreferenceManager.h"
 
 @interface GeneralViewController ()
 
@@ -19,13 +20,14 @@
 @property (weak) IBOutlet NSButton *autoCopyTranslateResultButton;
 @property (weak) IBOutlet NSButton *launchAtStartupButton;
 @property (weak) IBOutlet NSButton *autoCheckUpdateButton;
+@property (weak) IBOutlet NSSlider *fontSlider;
 
 @end
 
 @implementation GeneralViewController
 
 - (instancetype)init {
-    [self debug_hookAllMehtods];
+//    [self debug_hookAllMehtods];
     return [super initWithNibName:[self className] bundle:nil];
 }
 
@@ -40,11 +42,26 @@
     
     self.inputShortcutView.style = MASShortcutViewStyleTexturedRect;
     [self.inputShortcutView setAssociatedUserDefaultsKey:InputShortcutKey];
-
+    
+    [self setupFontSlider];
+    
     self.autoCopyTranslateResultButton.mm_isOn = Configuration.shared.autoCopyTranslateResult;
     self.launchAtStartupButton.mm_isOn = Configuration.shared.launchAtStartup;
     self.autoCheckUpdateButton.mm_isOn = Configuration.shared.automaticallyChecksForUpdates;
 }
+
+- (void)setupFontSlider {
+    self.fontSlider.numberOfTickMarks = 3;
+    self.fontSlider.maxValue = 2;
+    self.fontSlider.minValue = 0;
+    self.fontSlider.integerValue = PreferenceManager.manager.font;
+}
+
+- (IBAction)fontDidChanged:(NSSlider *)sender {
+//    NSLog(@"%s: %@", __func__, sender.stringValue);
+    PreferenceManager.manager.font = sender.integerValue;
+}
+
 
 #pragma mark - event
 
