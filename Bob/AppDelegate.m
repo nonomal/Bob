@@ -10,6 +10,7 @@
 #import "StatusItem.h"
 #import "Shortcut.h"
 #import "MMCrash.h"
+#import "PreferenceManager.h"
 
 @implementation AppDelegate
 
@@ -17,6 +18,7 @@
     MMLogInfo(@"程序启动");
     [MMCrash registerHandler];
     [StatusItem.shared setup];
+    [PreferenceManager.manager install];
     [Shortcut setup];
 }
 

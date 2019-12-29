@@ -8,7 +8,7 @@
 
 #import "GeneralViewController.h"
 #import "Shortcut.h"
-#import "Configuration.h"
+#import "PreferenceManager.h"
 #import "NSObject+Debug.h"
 #import "PreferenceManager.h"
 
@@ -45,9 +45,9 @@
     
     [self setupFontSlider];
     
-    self.autoCopyTranslateResultButton.mm_isOn = Configuration.shared.autoCopyTranslateResult;
-    self.launchAtStartupButton.mm_isOn = Configuration.shared.launchAtStartup;
-    self.autoCheckUpdateButton.mm_isOn = Configuration.shared.automaticallyChecksForUpdates;
+    self.autoCopyTranslateResultButton.mm_isOn = PreferenceManager.manager.autoCopyTranslateResult;
+    self.launchAtStartupButton.mm_isOn = PreferenceManager.manager.launchAtStartup;
+    self.autoCheckUpdateButton.mm_isOn = PreferenceManager.manager.automaticallyChecksForUpdates;
 }
 
 - (void)setupFontSlider {
@@ -66,15 +66,15 @@
 #pragma mark - event
 
 - (IBAction)autoCopyTranslateResultButtonClicked:(NSButton *)sender {
-    Configuration.shared.autoCopyTranslateResult = sender.mm_isOn;
+    PreferenceManager.manager.autoCopyTranslateResult = sender.mm_isOn;
 }
 
 - (IBAction)launchAtStartupButtonClicked:(NSButton *)sender {
-    Configuration.shared.launchAtStartup = sender.mm_isOn;
+    PreferenceManager.manager.launchAtStartup = sender.mm_isOn;
 }
 
 - (IBAction)autoCheckUpdateButtonClicked:(NSButton *)sender {
-    Configuration.shared.automaticallyChecksForUpdates = sender.mm_isOn;
+    PreferenceManager.manager.automaticallyChecksForUpdates = sender.mm_isOn;
 }
 
 #pragma mark - MASPreferencesViewController

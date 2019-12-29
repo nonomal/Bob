@@ -47,7 +47,6 @@
 		C99EEB222385796900FEE666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99EEB212385796900FEE666 /* Assets.xcassets */; };
 		C99EEB252385796900FEE666 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99EEB232385796900FEE666 /* Main.storyboard */; };
 		C99EEB282385796900FEE666 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB272385796900FEE666 /* main.m */; };
-		C99EEBC42385799D00FEE666 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB8A2385799D00FEE666 /* Configuration.m */; };
 		C99EEBC52385799D00FEE666 /* BaiduTranslate.m in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB912385799D00FEE666 /* BaiduTranslate.m */; };
 		C99EEBC62385799D00FEE666 /* TranslateError.m in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB922385799D00FEE666 /* TranslateError.m */; };
 		C99EEBC72385799D00FEE666 /* TranslateResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB932385799D00FEE666 /* TranslateResult.m */; };
@@ -181,8 +180,6 @@
 		C99EEB262385796900FEE666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C99EEB272385796900FEE666 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C99EEB292385796900FEE666 /* Bob.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bob.entitlements; sourceTree = "<group>"; };
-		C99EEB892385799D00FEE666 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
-		C99EEB8A2385799D00FEE666 /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 		C99EEB8C2385799D00FEE666 /* TranslateError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateError.h; sourceTree = "<group>"; };
 		C99EEB8D2385799D00FEE666 /* BaiduTranslate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduTranslate.h; sourceTree = "<group>"; };
 		C99EEB8E2385799D00FEE666 /* BaiduTranslateResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduTranslateResponse.h; sourceTree = "<group>"; };
@@ -458,21 +455,11 @@
 				C99EEBAD2385799D00FEE666 /* Selection */,
 				C9C3BDC4238E766B00D5F1C1 /* Snip */,
 				C9F7E87623A210B80025ADF6 /* Translate */,
-				C99EEB882385799D00FEE666 /* Configuration */,
 				C99EEBAA2385799D00FEE666 /* StatusItem */,
 				C98C179A239E1B7400BD02DB /* PerferenceWindow */,
 				C99EEB972385799D00FEE666 /* TranslateWindow */,
 			);
 			path = Feature;
-			sourceTree = "<group>";
-		};
-		C99EEB882385799D00FEE666 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				C99EEB892385799D00FEE666 /* Configuration.h */,
-				C99EEB8A2385799D00FEE666 /* Configuration.m */,
-			);
-			path = Configuration;
 			sourceTree = "<group>";
 		};
 		C99EEB8B2385799D00FEE666 /* Baidu */ = {
@@ -829,7 +816,6 @@
 				C9C3BDCD238E78BA00D5F1C1 /* SnipViewController.m in Sources */,
 				C90C77852391188400A65E42 /* SnipFocusView.m in Sources */,
 				C99EEB282385796900FEE666 /* main.m in Sources */,
-				C99EEBC42385799D00FEE666 /* Configuration.m in Sources */,
 				C9C4CF2F23B79C6D009C602E /* NSObject+Debug.m in Sources */,
 				C99EEBC62385799D00FEE666 /* TranslateError.m in Sources */,
 				C98C17A1239E3F4A00BD02DB /* PreferencesWindowController.m in Sources */,

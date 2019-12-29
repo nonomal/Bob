@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TranslateLanguage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,8 +16,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 字号
 @property (nonatomic, assign) NSInteger font;
+@property (nonatomic, assign) BOOL autoCopyTranslateResult;
+@property (nonatomic, assign) BOOL launchAtStartup;
+@property (nonatomic, assign) BOOL automaticallyChecksForUpdates;
+
+@property (nonatomic, copy) NSString *translateIdentifier;
+@property (nonatomic, assign) Language from;
+@property (nonatomic, assign) Language to;
+@property (nonatomic, assign) BOOL isPin;
+@property (nonatomic, assign) BOOL isFold;
 
 + (instancetype)manager;
+- (void)install;
+- (void)updateLoginItemWithLaunchAtStartup:(BOOL)launchAtStartup;
 
 @end
 

@@ -11,8 +11,9 @@
 #import "TranslateWindowController.h"
 #import "Snip.h"
 #import "Shortcut.h"
-#import "Configuration.h"
+#import "PreferenceManager.h"
 #import <SSZipArchive/SSZipArchive.h>
+#import "PreferenceManager.h"
 
 @interface StatusItem ()<NSMenuDelegate>
 
@@ -113,7 +114,7 @@ static StatusItem *_instance;
     if (Snip.shared.isSnapshotting) {
         [Snip.shared stop];
     }
-    if (!Configuration.shared.isPin) {
+    if (!PreferenceManager.manager.isPin) {
         [TranslateWindowController.shared close];
     }
     [PreferencesWindowController.shared show];
@@ -142,6 +143,7 @@ static StatusItem *_instance;
 
 - (IBAction)quitAction:(NSMenuItem *)sender {
     NSLog(@"退出应用");
+    [PreferenceManager.manager updateLoginItemWithLaunchAtStartup:PreferenceManager.manager.launchAtStartup];
     [NSApplication.sharedApplication terminate:nil];
 }
 

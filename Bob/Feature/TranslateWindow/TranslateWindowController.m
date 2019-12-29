@@ -11,7 +11,7 @@
 #import "TranslateWindow.h"
 #import "Selection.h"
 #import "Snip.h"
-#import "Configuration.h"
+#import "PreferenceManager.h"
 #import <QuartzCore/QuartzCore.h>
 #import <Carbon/Carbon.h>
 
@@ -105,7 +105,7 @@ static TranslateWindowController *_instance;
     if (!self.hadShow) {
         [self showAtMouseLocation];
     }
-    if (!self.window.visible || !Configuration.shared.isPin) {
+    if (!self.window.visible || !PreferenceManager.manager.isPin) {
         [self showAtMouseLocation];
     }
 }
@@ -146,7 +146,7 @@ static TranslateWindowController *_instance;
     if (Snip.shared.isSnapshotting) {
         return;
     }
-    if (!Configuration.shared.isPin && self.window.visible) {
+    if (!PreferenceManager.manager.isPin && self.window.visible) {
         [self close];
         [CATransaction flush];
     }
@@ -174,7 +174,7 @@ static TranslateWindowController *_instance;
     if (Snip.shared.isSnapshotting) {
         return;
     }
-    Configuration.shared.isFold = NO;
+    PreferenceManager.manager.isFold = NO;
     [self.viewController updateFoldState:NO];
     [self.viewController resetWithState:@"↩︎ 翻译\n⇧ + ↩︎ 换行\n⌘ + R 重试\n⌘ + W 关闭"];
     [self ensureShowAtMouseLocation];
