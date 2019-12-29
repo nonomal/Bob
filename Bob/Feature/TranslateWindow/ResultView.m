@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) MASConstraint *actionButtonBottomConstraint;
 @property (nonatomic, copy) void(^actionBlock)(void);
+@property (nonatomic, strong) RACDisposable *dispose;
 
 @end
 
@@ -134,18 +135,19 @@
     self.stateTextField.stringValue = string;
     if (actionTitle.length) {
         self.actionButton.hidden = NO;
-        RAC(self.actionButton, attributedTitle) = [MMObserve(self.actionButton, [PreferenceManager manager], font) map:^id _Nullable(id  _Nullable value) {
-            NSInteger fontNumber = [value integerValue];
+        [self dispose];
+        self.dispose = [MMObserve(self.actionButton, [PreferenceManager manager], font) subscribeNext:^(id  _Nullable x) {
+            NSInteger fontNumber = [x integerValue];
             // TODO: waiting for UI @shenjie
             switch (fontNumber) {
                 case 0:
-                    return [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:14] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
+                    self.actionButton.attributedTitle = [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:14] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
                 case 1:
-                    return [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:15] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
+                    self.actionButton.attributedTitle =  [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:15] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
                 case 2:
-                    return [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:18] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
+                    self.actionButton.attributedTitle =  [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:18] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
                     default:
-                return [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:18] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
+                self.actionButton.attributedTitle =  [NSAttributedString mm_attributedStringWithString:actionTitle font:[NSFont systemFontOfSize:18] color:[NSColor mm_colorWithHexString:@"#007AFF"]];
             }
         }];
         self.actionBlock = action;
