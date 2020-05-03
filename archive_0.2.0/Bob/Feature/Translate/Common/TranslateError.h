@@ -28,6 +28,8 @@ typedef NS_ENUM(NSUInteger, TranslateErrorType) {
     TranslateErrorTypeAPI,
     /// 不支持的语言
     TranslateErrorTypeUnsupportLanguage,
+    /// 删除代码
+    TranslateErrorTypeDeleted,
 };
 
 @interface TranslateError : NSObject

@@ -18,12 +18,9 @@
 		C910457023A3AF44001D5211 /* Translate.m in Sources */ = {isa = PBXBuildFile; fileRef = C910456F23A3AF44001D5211 /* Translate.m */; };
 		C91C153823AB8B0600CCAEC0 /* MMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C91C153723AB8B0600CCAEC0 /* MMTool.m */; };
 		C91DF6B023A35E07009CB158 /* MMOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DF6AE23A35E07009CB158 /* MMOrderedDictionary.m */; };
-		C91DF6B323A375E5009CB158 /* YoudaoTranslateResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DF6B223A375E5009CB158 /* YoudaoTranslateResponse.m */; };
-		C91DF6B723A390A7009CB158 /* YoudaoOCRResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DF6B623A390A7009CB158 /* YoudaoOCRResponse.m */; };
 		C959D33A238809B800DD8808 /* OCRResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C959D339238809B800DD8808 /* OCRResult.m */; };
 		C9676F2B23A0908F007DD023 /* NSPasteboard+MM.m in Sources */ = {isa = PBXBuildFile; fileRef = C9676F2A23A0908F007DD023 /* NSPasteboard+MM.m */; };
 		C9889F6123AA0FDA00C2D127 /* GoogleTranslate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9889F6023AA0FDA00C2D127 /* GoogleTranslate.m */; };
-		C9889F6423AA25C800C2D127 /* google-translate-sign.js in Resources */ = {isa = PBXBuildFile; fileRef = C9889F6323AA25C800C2D127 /* google-translate-sign.js */; };
 		C988B28823B1F12D007C8108 /* DarkModeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C988B28723B1F12D007C8108 /* DarkModeManager.m */; };
 		C98C17A1239E3F4A00BD02DB /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98C17A0239E3F4A00BD02DB /* PreferencesWindowController.m */; };
 		C98C17A5239E40AC00BD02DB /* GeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98C17A3239E40AC00BD02DB /* GeneralViewController.m */; };
@@ -51,8 +48,6 @@
 		C99EEBC52385799D00FEE666 /* BaiduTranslate.m in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB912385799D00FEE666 /* BaiduTranslate.m */; };
 		C99EEBC62385799D00FEE666 /* TranslateError.m in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB922385799D00FEE666 /* TranslateError.m */; };
 		C99EEBC72385799D00FEE666 /* TranslateResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB932385799D00FEE666 /* TranslateResult.m */; };
-		C99EEBC82385799D00FEE666 /* BaiduTranslateResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB942385799D00FEE666 /* BaiduTranslateResponse.m */; };
-		C99EEBC92385799D00FEE666 /* baidu-translate-sign.js in Resources */ = {isa = PBXBuildFile; fileRef = C99EEB952385799D00FEE666 /* baidu-translate-sign.js */; };
 		C99EEBCA2385799D00FEE666 /* TranslateLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB962385799D00FEE666 /* TranslateLanguage.m */; };
 		C99EEBCB2385799D00FEE666 /* ImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB9C2385799D00FEE666 /* ImageButton.m */; };
 		C99EEBCC2385799D00FEE666 /* NormalResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB9D2385799D00FEE666 /* NormalResultView.m */; };
@@ -122,17 +117,12 @@
 		C91C153723AB8B0600CCAEC0 /* MMTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTool.m; sourceTree = "<group>"; };
 		C91DF6AE23A35E07009CB158 /* MMOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMOrderedDictionary.m; sourceTree = "<group>"; };
 		C91DF6AF23A35E07009CB158 /* MMOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMOrderedDictionary.h; sourceTree = "<group>"; };
-		C91DF6B123A375E5009CB158 /* YoudaoTranslateResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YoudaoTranslateResponse.h; sourceTree = "<group>"; };
-		C91DF6B223A375E5009CB158 /* YoudaoTranslateResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoudaoTranslateResponse.m; sourceTree = "<group>"; };
-		C91DF6B523A390A7009CB158 /* YoudaoOCRResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YoudaoOCRResponse.h; sourceTree = "<group>"; };
-		C91DF6B623A390A7009CB158 /* YoudaoOCRResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoudaoOCRResponse.m; sourceTree = "<group>"; };
 		C959D338238809B800DD8808 /* OCRResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCRResult.h; sourceTree = "<group>"; };
 		C959D339238809B800DD8808 /* OCRResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCRResult.m; sourceTree = "<group>"; };
 		C9676F2923A0908F007DD023 /* NSPasteboard+MM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSPasteboard+MM.h"; sourceTree = "<group>"; };
 		C9676F2A23A0908F007DD023 /* NSPasteboard+MM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSPasteboard+MM.m"; sourceTree = "<group>"; };
 		C9889F5F23AA0FDA00C2D127 /* GoogleTranslate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleTranslate.h; sourceTree = "<group>"; };
 		C9889F6023AA0FDA00C2D127 /* GoogleTranslate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleTranslate.m; sourceTree = "<group>"; };
-		C9889F6323AA25C800C2D127 /* google-translate-sign.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "google-translate-sign.js"; sourceTree = "<group>"; };
 		C988B28623B1F12D007C8108 /* DarkModeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DarkModeManager.h; sourceTree = "<group>"; };
 		C988B28723B1F12D007C8108 /* DarkModeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DarkModeManager.m; sourceTree = "<group>"; };
 		C988B28923B1F135007C8108 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -182,14 +172,11 @@
 		C99EEB8A2385799D00FEE666 /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 		C99EEB8C2385799D00FEE666 /* TranslateError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateError.h; sourceTree = "<group>"; };
 		C99EEB8D2385799D00FEE666 /* BaiduTranslate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduTranslate.h; sourceTree = "<group>"; };
-		C99EEB8E2385799D00FEE666 /* BaiduTranslateResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduTranslateResponse.h; sourceTree = "<group>"; };
 		C99EEB8F2385799D00FEE666 /* TranslateResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateResult.h; sourceTree = "<group>"; };
 		C99EEB902385799D00FEE666 /* TranslateLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateLanguage.h; sourceTree = "<group>"; };
 		C99EEB912385799D00FEE666 /* BaiduTranslate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiduTranslate.m; sourceTree = "<group>"; };
 		C99EEB922385799D00FEE666 /* TranslateError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslateError.m; sourceTree = "<group>"; };
 		C99EEB932385799D00FEE666 /* TranslateResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslateResult.m; sourceTree = "<group>"; };
-		C99EEB942385799D00FEE666 /* BaiduTranslateResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiduTranslateResponse.m; sourceTree = "<group>"; };
-		C99EEB952385799D00FEE666 /* baidu-translate-sign.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "baidu-translate-sign.js"; sourceTree = "<group>"; };
 		C99EEB962385799D00FEE666 /* TranslateLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslateLanguage.m; sourceTree = "<group>"; };
 		C99EEB982385799D00FEE666 /* TranslateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateViewController.h; sourceTree = "<group>"; };
 		C99EEB992385799D00FEE666 /* QueryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryView.h; sourceTree = "<group>"; };
@@ -308,7 +295,6 @@
 			children = (
 				C9889F5F23AA0FDA00C2D127 /* GoogleTranslate.h */,
 				C9889F6023AA0FDA00C2D127 /* GoogleTranslate.m */,
-				C9889F6323AA25C800C2D127 /* google-translate-sign.js */,
 			);
 			path = Google;
 			sourceTree = "<group>";
@@ -460,9 +446,6 @@
 			children = (
 				C99EEB8D2385799D00FEE666 /* BaiduTranslate.h */,
 				C99EEB912385799D00FEE666 /* BaiduTranslate.m */,
-				C99EEB8E2385799D00FEE666 /* BaiduTranslateResponse.h */,
-				C99EEB942385799D00FEE666 /* BaiduTranslateResponse.m */,
-				C99EEB952385799D00FEE666 /* baidu-translate-sign.js */,
 			);
 			path = Baidu;
 			sourceTree = "<group>";
@@ -609,10 +592,6 @@
 			children = (
 				C9F7E87A23A2165F0025ADF6 /* YoudaoTranslate.h */,
 				C9F7E87B23A2165F0025ADF6 /* YoudaoTranslate.m */,
-				C91DF6B123A375E5009CB158 /* YoudaoTranslateResponse.h */,
-				C91DF6B223A375E5009CB158 /* YoudaoTranslateResponse.m */,
-				C91DF6B523A390A7009CB158 /* YoudaoOCRResponse.h */,
-				C91DF6B623A390A7009CB158 /* YoudaoOCRResponse.m */,
 			);
 			path = Youdao;
 			sourceTree = "<group>";
@@ -710,11 +689,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99EEB222385796900FEE666 /* Assets.xcassets in Resources */,
-				C99EEBC92385799D00FEE666 /* baidu-translate-sign.js in Resources */,
 				C99EEB252385796900FEE666 /* Main.storyboard in Resources */,
 				C98C17A6239E40AC00BD02DB /* GeneralViewController.xib in Resources */,
 				C98C17AB239E410300BD02DB /* AboutViewController.xib in Resources */,
-				C9889F6423AA25C800C2D127 /* google-translate-sign.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,7 +790,6 @@
 				C9C3BDCA238E76C800D5F1C1 /* SnipWindow.m in Sources */,
 				C99EEBD52385799D00FEE666 /* Selection.m in Sources */,
 				C99EEBCE2385799D00FEE666 /* TranslateViewController.m in Sources */,
-				C99EEBC82385799D00FEE666 /* BaiduTranslateResponse.m in Sources */,
 				C99EEBDA2385799D00FEE666 /* NSButton+MM.m in Sources */,
 				C98CFA29239F8CDB00FB7EC4 /* MMFileLogFormatter.m in Sources */,
 				C98C17B0239E516A00BD02DB /* Shortcut.m in Sources */,
@@ -824,7 +800,6 @@
 				C99EEB1D2385796700FEE666 /* AppDelegate.m in Sources */,
 				C99EEBD72385799D00FEE666 /* MMMake.m in Sources */,
 				C9D679CC23A3403F0073957C /* NSDictionary+MM.m in Sources */,
-				C91DF6B323A375E5009CB158 /* YoudaoTranslateResponse.m in Sources */,
 				C9889F6123AA0FDA00C2D127 /* GoogleTranslate.m in Sources */,
 				C99EEBD22385799D00FEE666 /* ResultView.m in Sources */,
 				C99EEBDC2385799D00FEE666 /* NSColor+MM.m in Sources */,
@@ -832,7 +807,6 @@
 				C99EEBD82385799D00FEE666 /* NSString+MM.m in Sources */,
 				C99EEBDB2385799D00FEE666 /* NSAttributedString+MM.m in Sources */,
 				C959D33A238809B800DD8808 /* OCRResult.m in Sources */,
-				C91DF6B723A390A7009CB158 /* YoudaoOCRResponse.m in Sources */,
 				C988B28823B1F12D007C8108 /* DarkModeManager.m in Sources */,
 				C9F7E87C23A2165F0025ADF6 /* YoudaoTranslate.m in Sources */,
 				C99EEBCC2385799D00FEE666 /* NormalResultView.m in Sources */,

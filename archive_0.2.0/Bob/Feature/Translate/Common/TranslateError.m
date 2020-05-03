@@ -33,6 +33,8 @@ NSString * const TranslateErrorRequestErrorKey = @"Error";
         case TranslateErrorTypeUnsupportLanguage:
             errorString = @"不支持的语言";
             break;
+        case TranslateErrorTypeDeleted:
+            errorString = @"实现接口请求相关代码已删除，如需使用，请自行根据各大服务商开发平台的API文档实现。\n\n实现取词、截图、自动更新、开机自启动、全局快捷键、窗口悬浮、菜单栏图标等等功能的代码都是正常保留的，可在工程中查阅。";
         default:
             break;
     }
